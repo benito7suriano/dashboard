@@ -44,7 +44,7 @@ const Ecommerce = () => {
               </button>
               <p className='mt-3'>
                 <span className='text-lg font-semibold'>{item.amount}</span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                <span className={`text-sm item.pcColor ml-2`}>
                   {item.percentage}
                 </span>
               </p>
@@ -112,6 +112,9 @@ const Ecommerce = () => {
                     />
                   </div>
                 </div>
+              </div>
+              <div>
+                <Stacked width='320px' height='360px' />
               </div>
             </div>
           </div>
