@@ -27,8 +27,9 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-        {/* summary cards */}
+        {/* summary section */}
         <div className='flex m-3 flex-wrap justify-center gap-1 items-center'>
+          {/* summary cards x 4 */}
           {earningData.map((item) => (
             <div
               key={item.title}
@@ -52,9 +53,11 @@ const Ecommerce = () => {
             </div>
           ))}
         </div>
-        {/* revenue updates card */}
+        {/* revenue updates section */}
         <div className='flex gap-10 flex-wrap justify-center'>
+          {/* revenue udpates card */}
           <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
+            {/* revenue updates card's header */}
             <div className='flex justify-between'>
               <p className='font-semibold'>Revenue Updates</p>
               <div className='flex items-center gap-4'>
@@ -72,10 +75,10 @@ const Ecommerce = () => {
                 </p>
               </div>
             </div>
-            {/* budget and expense section */}
+            {/* budget and expense totals */}
             <div className='mt-10 flex gap-10 flex-wrap justify-center'>
               <div className='border-r-1 border-color m-4 pr-10'>
-                {/* budget summary */}
+                {/* budget total */}
                 <div>
                   <p>
                     <span className='text-3xl font-semibold'>$93,438</span>
@@ -85,7 +88,7 @@ const Ecommerce = () => {
                   </p>
                   <p className='text-gray-500 mt-1'>Budget</p>
                 </div>
-                {/* expense summary */}
+                {/* expense total */}
                 <div className='mt-8'>
                   <p>
                     <span className='text-3xl font-semibold'>$48,438</span>
