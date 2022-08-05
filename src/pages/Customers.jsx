@@ -14,6 +14,7 @@ import {
 
 import { customersData, customersGrid } from '../data/dummy'
 import { Header } from '../components'
+import { sort } from '@syncfusion/ej2-react-charts'
 
 const Customers = () => {
   return (
@@ -22,14 +23,16 @@ const Customers = () => {
       <GridComponent
         dataSource={customersData}
         allowPaging
-        toolbar={[]}
+        allowSorting
+        toolbar={['Delete']}
+        editSettings={{ allowDeleting: true, allowEditing: true }}
         width='auto'>
         <ColumnsDirective>
           {customersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[Page, Toolbar]} />
+        <Inject services={[Page, Toolbar, Selection, Sort, Filter]} />
       </GridComponent>
     </div>
   )
