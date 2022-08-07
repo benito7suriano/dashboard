@@ -10,6 +10,18 @@ const ColorPicker = () => {
         <Header category='App' title='Color Picker' />
         <div className='text-center'>
           <div id='preview' />
+          <div className='flex justify-center items-center gap-20 flex-wrap'>
+            <div>
+              <p className='text-2xl font-semibold mt-2 mb-4'>Inline Palette</p>
+              <ColorPickerComponent
+                id='inline-palette'
+                mode='Palette'
+                modeSwitcher={false}
+                inline
+                showButtons={false}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
