@@ -27,7 +27,7 @@ import './App.css'
 import { useStateContext } from './contexts/ContextProvider'
 
 const App = () => {
-  const { activeMenu } = useStateContext()
+  const { activeMenu, themeSettings } = useStateContext()
   return (
     <div>
       <BrowserRouter>
@@ -60,7 +60,7 @@ const App = () => {
             </div>
 
             <div>
-              <ThemeSettings />
+              {themeSettings && <ThemeSettings />}
               <Routes>
                 {/* Dashboard */}
                 <Route path='/' element={<Ecommerce />} />
