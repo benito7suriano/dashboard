@@ -397,7 +397,7 @@ export const LinePrimaryXAxis = {
   labelFormat: 'y',
   intervalType: 'Years',
   edgeLabelPlacement: 'Shift',
-  majorGridLines: { width: 0 },
+  majorGrids: { width: 0 },
   background: 'white',
 }
 
