@@ -41,7 +41,12 @@ const Pie = () => {
               dataSource={pieChartData}
               xName='x'
               yName='y'
-              exploded={true}
+              explode
+              explodeOffset='10%'
+              innerRadius='40%'
+              startAngle={0}
+              endAngle={0}
+              radius={'70%'}
               dataLabel={{
                 visible: true,
                 position: 'Inside',
