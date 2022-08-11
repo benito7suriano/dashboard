@@ -5,30 +5,33 @@ import {
   SparklineTooltip,
 } from '@syncfusion/ej2-react-charts'
 
-const Sparkline = ({ currentColor, id, type, height, width, data, color }) => {
-  return (
-    <SparklineComponent
-      id={id}
-      height={height}
-      width={width}
-      lineWidth={1}
-      valueType='Numeric'
-      fill={color}
-      border={{ color: currentColor, width: 2 }}
-      dataSource={data}
-      xName='x'
-      yName='y'
-      type={type}
-      tooltipSettings={{
-        visible: true,
-        format: '${x}: data ${y}',
-        trackLineSettings: {
+class Sparkline extends React.PureComponent {
+  render() {
+    const { currentColor, id, type, height, width, data, color } = this.props
+    return (
+      <SparklineComponent
+        id={id}
+        height={height}
+        width={width}
+        lineWidth={1}
+        valueType='Numeric'
+        fill={color}
+        border={{ color: currentColor, width: 2 }}
+        dataSource={data}
+        xName='x'
+        yName='y'
+        type={type}
+        tooltipSettings={{
           visible: true,
-        },
-      }}>
-      <Inject services={[SparklineTooltip]} />
-    </SparklineComponent>
-  )
+          format: '${x}: data ${y}',
+          trackLineSettings: {
+            visible: true,
+          },
+        }}>
+        <Inject services={[SparklineTooltip]} />
+      </SparklineComponent>
+    )
+  }
 }
 
 export default Sparkline
