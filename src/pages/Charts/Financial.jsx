@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -20,7 +20,10 @@ import {
   FinancialPrimaryYAxis,
 } from '../../data/dummy'
 
+import { useStateContext } from '../../contexts/ContextProvider'
+
 const Financial = () => {
+  const { currentMode } = useStateContext()
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
       <Header category={'Chart'} title='Financial Graph' />
@@ -35,7 +38,8 @@ const Financial = () => {
             enable: true,
             lineType: 'Vertical',
             line: { width: 0 },
-          }}>
+          }}
+          background={currentMode === 'Dark' ? '#33373E' : '#fff'}>
           <Inject
             services={[
               HiloSeries,
