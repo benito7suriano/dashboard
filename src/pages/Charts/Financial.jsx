@@ -28,7 +28,14 @@ const Financial = () => {
         <ChartComponent
           id='fin-charts'
           primaryXAxis={FinancialPrimaryXAxis}
-          primaryYAxis={FinancialPrimaryYAxis}>
+          primaryYAxis={FinancialPrimaryYAxis}
+          chartArea={{ border: { width: 0 } }}
+          tooltip={{ enable: true, shared: true }}
+          crosshair={{
+            enable: true,
+            lineType: 'Vertical',
+            line: { width: 0 },
+          }}>
           <Inject
             services={[
               HiloSeries,
